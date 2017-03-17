@@ -1,4 +1,4 @@
-package cn.liu.mynewsapp;
+package cn.liu.mynewsapp.avtivity;
 
 import android.support.annotation.IdRes;
 import android.support.design.widget.NavigationView;
@@ -14,12 +14,15 @@ import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
 
 import butterknife.BindView;
+import cn.liu.mynewsapp.R;
+import fragment.HistoryFragment;
 import fragment.NewsFragment;
 
 public class MainActivity extends AppCompatActivity {
     private BottomBar bottomBar;
     private Fragment currentFragment;
     private NewsFragment newsFragment;
+    private HistoryFragment historyFragment;
     FrameLayout flContent;
     NavigationView nvLeft;
     DrawerLayout dlActivityMain;
@@ -43,9 +46,11 @@ public class MainActivity extends AppCompatActivity {
                         switchFragment(newsFragment);
 
                     break;
-                    case R.id.tab_joke:
-                    break;
                     case R.id.tab_today:
+                        if (historyFragment == null) historyFragment = new HistoryFragment();
+                        switchFragment(historyFragment);
+                    break;
+                    case R.id.tab_joke:
                     break;
                     case R.id.tab_robot:
                         break;

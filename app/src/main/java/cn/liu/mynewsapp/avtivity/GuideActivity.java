@@ -1,4 +1,4 @@
-package cn.liu.mynewsapp;
+package cn.liu.mynewsapp.avtivity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -16,6 +16,7 @@ import android.widget.RelativeLayout;
 import java.util.ArrayList;
 
 import Utils.SharedPreferencesUntils;
+import cn.liu.mynewsapp.R;
 
 
 /**

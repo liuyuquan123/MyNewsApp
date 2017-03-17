@@ -23,7 +23,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".SplashActivity"
+            android:name=".avtivity.SplashActivity"
             android:configChanges="screenSize"
             android:screenOrientation="portrait">
             >
@@ -33,10 +33,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
-        <activity android:name=".NewsDadaActivity">
+        <activity android:name=".avtivity.MainActivity" />
+        <activity android:name=".avtivity.NewsDadaActivity">
         </activity>
-        <activity android:name=".GuideActivity"/>
+        <activity android:name=".avtivity.GuideActivity"/>
+        <activity android:name=".avtivity.HistortDetailActivity"/>
 
 
         <activity

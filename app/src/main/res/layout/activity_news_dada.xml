@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="cn.liu.mynewsapp.NewsDadaActivity">
+    tools:context="cn.liu.mynewsapp.avtivity.NewsDadaActivity">
     <include layout="@layout/new_title_bar"/>
 <WebView
     android:id="@+id/wv_news"

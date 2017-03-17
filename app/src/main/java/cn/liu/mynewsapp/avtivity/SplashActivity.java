@@ -1,4 +1,4 @@
-package cn.liu.mynewsapp;
+package cn.liu.mynewsapp.avtivity;
 
 import android.animation.Animator;
 import android.animation.AnimatorSet;
@@ -12,8 +12,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import Utils.SharedPreferencesUntils;
-import butterknife.BindView;
-import butterknife.ButterKnife;
+import cn.liu.mynewsapp.R;
 
 public class SplashActivity extends AppCompatActivity {
 

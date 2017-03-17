@@ -1,4 +1,4 @@
-package cn.liu.mynewsapp;
+package cn.liu.mynewsapp.avtivity;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -11,6 +11,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.ImageButton;
 
+import cn.liu.mynewsapp.R;
 import cn.sharesdk.onekeyshare.OnekeyShare;
 
 public class NewsDadaActivity extends AppCompatActivity implements View.OnClickListener{

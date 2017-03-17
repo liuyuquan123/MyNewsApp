@@ -13,7 +13,7 @@ import com.chad.library.adapter.base.listener.OnItemChildClickListener;
 import MyConstant.Constants;
 import adapter.NewsDataAdapter;
 import bean.NewsDataBean;
-import cn.liu.mynewsapp.NewsDadaActivity;
+import cn.liu.mynewsapp.avtivity.NewsDadaActivity;
 import cn.liu.mynewsapp.R;
 import internet.MyNewsClient;
 import internet.MyNewsService;
