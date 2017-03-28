@@ -15,7 +15,7 @@ import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
 
-import Utils.SharedPreferencesUntils;
+import cn.liu.mynewsapp.Utils.SharedPreferencesUntils;
 import cn.liu.mynewsapp.R;
 
 

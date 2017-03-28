@@ -13,16 +13,19 @@ import android.widget.FrameLayout;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
 
-import butterknife.BindView;
 import cn.liu.mynewsapp.R;
-import fragment.HistoryFragment;
-import fragment.NewsFragment;
+import cn.liu.mynewsapp.fragment.HistoryFragment;
+import cn.liu.mynewsapp.fragment.JokePhotoFragment;
+import cn.liu.mynewsapp.fragment.NewsFragment;
+import cn.liu.mynewsapp.fragment.RobotFragment;
 
 public class MainActivity extends AppCompatActivity {
     private BottomBar bottomBar;
     private Fragment currentFragment;
     private NewsFragment newsFragment;
     private HistoryFragment historyFragment;
+    private JokePhotoFragment jokePhotoFragment;
+    private RobotFragment robotFragment;
     FrameLayout flContent;
     NavigationView nvLeft;
     DrawerLayout dlActivityMain;
@@ -51,8 +54,13 @@ public class MainActivity extends AppCompatActivity {
                         switchFragment(historyFragment);
                     break;
                     case R.id.tab_joke:
+                        if (jokePhotoFragment==null)jokePhotoFragment=new JokePhotoFragment();
+                        switchFragment(jokePhotoFragment);
                     break;
+
                     case R.id.tab_robot:
+                        if (robotFragment==null)robotFragment=new RobotFragment();
+                        switchFragment(robotFragment);
                         break;
                     case R.id.tab_about:
                         break;

@@ -1,4 +1,4 @@
-package Utils;
+package cn.liu.mynewsapp.Utils;
 
 import android.content.Context;
 

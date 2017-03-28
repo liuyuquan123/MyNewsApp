@@ -1,8 +1,10 @@
-package internet;
+package cn.liu.mynewsapp.internet;
 
-import bean.HistoryDetailBean;
-import bean.NewsDataBean;
-import bean.TodayOfHistoryBean;
+import cn.liu.mynewsapp.bean.HistoryDetailBean;
+import cn.liu.mynewsapp.bean.JokePhotoBean;
+import cn.liu.mynewsapp.bean.NewsDataBean;
+import cn.liu.mynewsapp.bean.RobotBean;
+import cn.liu.mynewsapp.bean.TodayOfHistoryBean;
 import io.reactivex.Observable;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
@@ -44,6 +46,16 @@ public interface MyNewsService {
     @GET("todayOnhistory/queryDetail.php?key=f5f7d655ef148f6bb777c80167f7f6de")
     Observable<HistoryDetailBean> getHistoryDetailData(
             @Query("e_id") String e_id
+    );
+//
+//    //http://api.laifudao.com/open/tupian.json
+//    @GET("open/tupian.json")
+//    Observable<JokePhotoBean> getJokePhotoData();
+
+
+    @GET("api?key=ca195cfaddd443ddb9b210409c26cca7")
+    Observable<RobotBean> getQARobotData(
+            @Query("info") String info
     );
 
 }

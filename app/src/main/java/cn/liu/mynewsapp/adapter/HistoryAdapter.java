@@ -1,11 +1,9 @@
-package adapter;
+package cn.liu.mynewsapp.adapter;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 
-import java.util.List;
-
-import bean.TodayOfHistoryBean;
+import cn.liu.mynewsapp.bean.TodayOfHistoryBean;
 import cn.liu.mynewsapp.R;
 
 /**

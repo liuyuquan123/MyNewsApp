@@ -1,4 +1,4 @@
-package fragment;
+package cn.liu.mynewsapp.fragment;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -10,13 +10,13 @@ import android.view.View;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.listener.OnItemChildClickListener;
 
-import MyConstant.Constants;
-import adapter.NewsDataAdapter;
-import bean.NewsDataBean;
+import cn.liu.mynewsapp.MyConstant.Constants;
+import cn.liu.mynewsapp.adapter.NewsDataAdapter;
+import cn.liu.mynewsapp.bean.NewsDataBean;
 import cn.liu.mynewsapp.avtivity.NewsDadaActivity;
 import cn.liu.mynewsapp.R;
-import internet.MyNewsClient;
-import internet.MyNewsService;
+import cn.liu.mynewsapp.internet.MyNewsClient;
+import cn.liu.mynewsapp.internet.MyNewsService;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
@@ -50,8 +50,9 @@ public class NewsDetailFragment extends BaseFragment {
         srl= (SwipeRefreshLayout) view.findViewById(R.id.srl_news);
         rvNews= (RecyclerView) view.findViewById(R.id.rv_news);
         mRvAdapter = new NewsDataAdapter();
-        mRvAdapter.openLoadAnimation(BaseQuickAdapter.SCALEIN);
 
+        //开启设配器动画
+        mRvAdapter.openLoadAnimation(BaseQuickAdapter.SCALEIN);
         //设置下拉刷新
         srl.setColorSchemeColors(Color.RED, Color.RED);
         //添加下拉刷新监听器
@@ -63,9 +64,11 @@ public class NewsDetailFragment extends BaseFragment {
             }
         });
 
-
+          //RecyclerView的初始化
         rvNews.setAdapter(mRvAdapter);
+        //设置布局管理器
         rvNews.setLayoutManager(new LinearLayoutManager(getActivity()));
+        //设置RecyclerView的初始化点击事件
         rvNews.addOnItemTouchListener(new OnItemChildClickListener() {
             @Override
             public void onSimpleItemChildClick(BaseQuickAdapter adapter, View view, int position) {
@@ -81,6 +84,8 @@ public class NewsDetailFragment extends BaseFragment {
         return view;
     }
 
+
+    //从服务器获取新闻数据
     @Override
     public void initData() {
         getDataFormServer();
@@ -88,7 +93,7 @@ public class NewsDetailFragment extends BaseFragment {
 
 
     //从网络获取数据
-    public void getDataFormServer() {
+    private void getDataFormServer() {
         //显示或者隐藏刷新进度条
         srl.setRefreshing(true);
         MyNewsClient.getInstance()

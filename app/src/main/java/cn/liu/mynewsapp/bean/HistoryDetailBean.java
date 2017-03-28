@@ -1,4 +1,4 @@
-package bean;
+package cn.liu.mynewsapp.bean;
 
 import java.util.List;
 

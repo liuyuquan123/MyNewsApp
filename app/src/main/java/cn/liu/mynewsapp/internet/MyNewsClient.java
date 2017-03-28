@@ -1,4 +1,4 @@
-package internet;
+package cn.liu.mynewsapp.internet;
 
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 

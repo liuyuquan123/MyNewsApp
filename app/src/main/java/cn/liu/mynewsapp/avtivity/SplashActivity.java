@@ -11,7 +11,7 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
-import Utils.SharedPreferencesUntils;
+import cn.liu.mynewsapp.Utils.SharedPreferencesUntils;
 import cn.liu.mynewsapp.R;
 
 public class SplashActivity extends AppCompatActivity {
@@ -58,8 +58,8 @@ public class SplashActivity extends AppCompatActivity {
                     Intent intent;
                     if (is_first_time){
                         //第一次进入则跳转新手引导画面
-                        intent= new Intent(getApplicationContext(),GuideActivity.class);
-
+//                        intent= new Intent(getApplicationContext(),GuideActivity.class);
+                        intent=new Intent(getApplicationContext(),MainActivity.class);
 
                     }
                     else {

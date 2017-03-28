@@ -1,4 +1,4 @@
-package fragment;
+package cn.liu.mynewsapp.fragment;
 
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
@@ -14,13 +14,13 @@ import com.chad.library.adapter.base.listener.OnItemChildClickListener;
 import java.util.Calendar;
 import java.util.List;
 
-import MyConstant.Constants;
-import adapter.HistoryAdapter;
-import bean.TodayOfHistoryBean;
+import cn.liu.mynewsapp.MyConstant.Constants;
+import cn.liu.mynewsapp.adapter.HistoryAdapter;
+import cn.liu.mynewsapp.bean.TodayOfHistoryBean;
 import cn.liu.mynewsapp.R;
 import cn.liu.mynewsapp.avtivity.HistortDetailActivity;
-import internet.MyNewsClient;
-import internet.MyNewsService;
+import cn.liu.mynewsapp.internet.MyNewsClient;
+import cn.liu.mynewsapp.internet.MyNewsService;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;

@@ -16,12 +16,11 @@ import com.bumptech.glide.Glide;
 
 import java.util.List;
 
-import MyConstant.Constants;
-import bean.HistoryDetailBean;
-import bean.TodayOfHistoryBean;
+import cn.liu.mynewsapp.MyConstant.Constants;
+import cn.liu.mynewsapp.bean.HistoryDetailBean;
 import cn.liu.mynewsapp.R;
-import internet.MyNewsClient;
-import internet.MyNewsService;
+import cn.liu.mynewsapp.internet.MyNewsClient;
+import cn.liu.mynewsapp.internet.MyNewsService;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;

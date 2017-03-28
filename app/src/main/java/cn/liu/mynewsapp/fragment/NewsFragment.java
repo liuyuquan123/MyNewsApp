@@ -1,4 +1,4 @@
-package fragment;
+package cn.liu.mynewsapp.fragment;
 import android.content.Context;
 import android.graphics.Color;
 import android.support.v4.app.FragmentManager;
@@ -41,6 +41,14 @@ public class NewsFragment extends BaseFragment {
 
         //设置新闻指示器
         MagicIndicator magicIndicator= (MagicIndicator) view.findViewById(R.id.news_magicindicator);
+
+        /*
+        *顾名思义， CommonNavigator 是一个通用的指示器，也就是指我们常见的横向的、
+        * 带有很多子元素的的指示器。子元素中可带文本、图标以及你想要的任何View。
+        * 效果图中除了最后一个指示器是 CircleNavigator 外，
+        * 其余全是对 CommonNavigator 进行参数配置的结果！
+        *
+        * */
         CommonNavigator commonNavigator=new CommonNavigator(mActivity);
         commonNavigator.setAdapter(new CommonNavigatorAdapter() {
             @Override
@@ -51,9 +59,9 @@ public class NewsFragment extends BaseFragment {
             @Override
             public IPagerTitleView getTitleView(Context context, final int index) {
                 ColorTransitionPagerTitleView colorTransitionPagerTitleView = new ColorTransitionPagerTitleView(context);
-                colorTransitionPagerTitleView.setNormalColor(Color.BLACK);
-                colorTransitionPagerTitleView.setSelectedColor(Color.RED);
-                colorTransitionPagerTitleView.setText(types[index]);
+                colorTransitionPagerTitleView.setNormalColor(Color.BLACK);//设置导航栏字体的颜色
+                colorTransitionPagerTitleView.setSelectedColor(Color.RED);//设置选中导航栏字体的颜色
+                colorTransitionPagerTitleView.setText(types[index]);//设置导航栏的内容
                 colorTransitionPagerTitleView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -73,11 +81,12 @@ public class NewsFragment extends BaseFragment {
 
             }
         });
-        magicIndicator.setNavigator(commonNavigator);
+
+        magicIndicator.setNavigator(commonNavigator);//将导航栏与指示器绑定
         //viewpager绑定指示器
         ViewPagerHelper.bind(magicIndicator,newsPager);
 
-
+      //设置菜单键的点击事件，开关侧边栏。
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
